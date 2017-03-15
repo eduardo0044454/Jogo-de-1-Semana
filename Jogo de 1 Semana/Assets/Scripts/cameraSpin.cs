@@ -5,7 +5,6 @@ using UnityEngine;
 public class cameraSpin : MonoBehaviour
 {
     public float spinSpeed;
-    public GameObject teta;
 
 	// Use this for initialization
 	void Start ()

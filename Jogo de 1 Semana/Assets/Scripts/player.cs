@@ -12,7 +12,7 @@ public class player : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        count = 1;
+        count = 2;
 	}
 	
 	// Update is called once per frame
@@ -43,7 +43,7 @@ public class player : MonoBehaviour
     {
         if (collision.gameObject.tag == "plataform")
         {
-            count = 1;
+            count = 2;
         }
     }
 }
