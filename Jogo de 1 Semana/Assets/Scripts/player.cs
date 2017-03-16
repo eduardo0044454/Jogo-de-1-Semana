@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class player : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class player : MonoBehaviour
     public float jumpSpeed;
     private int count; 
     public Transform ball;
+
+    public Text playTime;
+    private float playTimeValue;
 
 	// Use this for initialization
 	void Start ()
@@ -35,9 +39,13 @@ public class player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && count > 0)
         {
+            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, 0);
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpSpeed), ForceMode2D.Impulse);
             count--;
         }
+
+        playTimeValue++;
+        playTime.text = "Time: " + playTimeValue;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

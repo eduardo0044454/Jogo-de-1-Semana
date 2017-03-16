@@ -13,7 +13,7 @@ public class canSpawner : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        timeLeft = 90f;
+        timeLeft = 270f;
         newCan = false;
     }
 	
@@ -35,7 +35,7 @@ public class canSpawner : MonoBehaviour
     {
         if (collision.gameObject.tag == "MainCamera")
         {
-            Instantiate(canStraight, new Vector3(transform.position.x, transform.position.y + 18, transform.position.z), Quaternion.identity);
+            Instantiate(canStraight, new Vector3(transform.position.x, transform.position.y + 36, transform.position.z), Quaternion.identity);
             newCan = true;
             //randomValue = Random.Range(1, 3);
             //if (randomValue == 1)
