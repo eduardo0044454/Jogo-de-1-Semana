@@ -48,7 +48,10 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\cameraMove.cs" />
      <Compile Include="Assets\Scripts\cameraSpin.cs" />
-     <Compile Include="Assets\Scripts\plataformSpawn.cs" />
+     <Compile Include="Assets\Scripts\canSpawner.cs" />
+     <Compile Include="Assets\Scripts\gameOver.cs" />
+     <Compile Include="Assets\Scripts\menu.cs" />
+     <Compile Include="Assets\Scripts\platformSpawn.cs" />
      <Compile Include="Assets\Scripts\player.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
