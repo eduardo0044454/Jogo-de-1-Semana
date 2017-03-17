@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 41498897f69847646a78a166c680834b
+timeCreated: 1489771274
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: LEMON DAY
+  fontNames:
+  - LEMON DAY
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
