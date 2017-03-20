@@ -14,6 +14,11 @@ public class player : MonoBehaviour
     public Text playTime;
     private float playTimeValue;
 
+	public AudioSource jumpSound;
+	public AudioClip jumpSFX;
+	private float lowPitchRange = .95f;
+	private float highPitchRange = 1.05f;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -42,6 +47,7 @@ public class player : MonoBehaviour
             GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, 0);
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpSpeed), ForceMode2D.Impulse);
             count--;
+			playSingle (jumpSFX);
         }
 
         playTimeValue++;
@@ -60,4 +66,24 @@ public class player : MonoBehaviour
 			SceneManager.LoadScene ("gameOver", LoadSceneMode.Single);
 		}
     }
+
+	void playSingle(AudioClip clip)
+	{
+		if (!jumpSound.isPlaying && count >= 0) 
+		{
+			jumpSound.clip = clip;
+			jumpSound.Play ();
+			randomizeSfx (jumpSFX);	
+		}
+	}
+
+	void randomizeSfx(params AudioClip[] clips)
+	{
+		int randomIndex = Random.Range (0, clips.Length);
+		float randomPitch = Random.Range (lowPitchRange, highPitchRange);
+
+		jumpSound.pitch = randomPitch;
+		jumpSound.clip = clips [randomIndex];
+		jumpSound.Play ();
+	}
 }
